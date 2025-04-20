@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-layouts.app>
     <x-slot name="header">
       <h2 class="text-gray-800 text-xl font-semibold leading-tight">{{ __('Create New Post') }}</h2>
     </x-slot>
@@ -10,4 +10,4 @@
         </div>
       </div>
     </div>
-  </x-app-layout>
+  </x-layouts.app>

@@ -21,8 +21,8 @@ class PostList extends Component
     {
         $posts = Post::where('is_published', true)
             ->where(function ($query) {
-                $query->where('title', 'ilike', '%' . $this->search . '%')
-                    ->orWhere('content', 'ilike', '%' . $this->search . '%');
+                $query->where('title', 'like', '%' . $this->search . '%')
+                    ->orWhere('content', 'like', '%' . $this->search . '%');
             })
             ->with('user', 'tags')
             ->latest('published_at')
